@@ -18,12 +18,13 @@ $dictionary = [
     "book" => "quyển sách",
 ];
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $mean = $_POST["text"];
+    $input = $_POST["text"];
 
-    if (array_key_exists($mean, $dictionary)) {
-        echo $mean . " => " . $dictionary[$mean];
-    } else {
-        echo "Không có";
+    if (array_key_exists($input, $dictionary)) {
+        echo $input . " => " . $dictionary[$input];
+    }
+    else {
+        echo "That's not in the dictionary!";
     }
 }
 
